@@ -15,7 +15,7 @@ export function addUser(req, res) {
 
   const body = req.body;
 
-  const values = [body.name, body.email, body.phone, body.bith];
+  const values = [body.name, body.email, body.phone, body.birth];
 
   db.query(query, [values], (err) => {
     if (err) return res.status(400).json(err);
